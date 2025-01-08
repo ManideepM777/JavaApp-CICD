@@ -139,7 +139,7 @@ pipeline {
         }
         stage('Deploy to Tomcat') {
             steps {
-                sh 'sudo cp /var/lib/jenkins/workspace/Pet-Clinic/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/'
+                sh 'sudo cp /var/lib/jenkins/workspace/JavaApp/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/'
             }
             post {
                 always {
