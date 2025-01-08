@@ -28,12 +28,13 @@ pipeline{
                 sh 'mvn test'
             }
         }
-        stage("Sonarqube Analysis "){
-            steps{
+        stage("Sonarqube Analysis") {
+            steps {
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Pet-Clinic \
-                    -Dsonar.java.binaries=target/classes
-                    -Dsonar.projectKey=Petclinic -X'''
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner \
+                            -Dsonar.projectName=Pet-Clinic \
+                            -Dsonar.projectKey=Petclinic \
+                            -Dsonar.java.binaries=target/classes '''
                 }
             }
         }
