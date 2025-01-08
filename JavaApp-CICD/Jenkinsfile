@@ -32,7 +32,7 @@ pipeline{
             steps{
                 withSonarQubeEnv('sonar-server') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=Pet-Clinic \
-                    -Dsonar.projectKey=Petclinic '''
+                    -Dsonar.projectKey=Petclinic -X'''
                 }
             }
         }
