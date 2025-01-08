@@ -20,7 +20,10 @@ pipeline{
         }
         stage('mvn compile'){
             steps{
-                sh 'mvn clean compile'
+                sh '''
+                  cd JavaApp-CICD
+                  mvn clean compile
+                '''
             }
         }
         stage('mvn test'){
