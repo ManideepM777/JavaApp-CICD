@@ -106,7 +106,7 @@ pipeline {
         }
         stage('Deploy to Container') {
             steps {
-                sh 'docker run -d --name pet1 -p 8082:8083 manideepm777/petclinic:latest'
+                sh 'docker run -d --name pet1 -p 8082:8080 manideepm777/petclinic:latest'
             }
         }
         stage('Deploy to Tomcat') {
