@@ -111,7 +111,7 @@ pipeline {
         }
         stage('Deploy to Tomcat') {
             steps {
-                sh 'sudo cp /var/lib/jenkins/workspace/Pet-Clinic/JavaApp-CICD/target/petclinic.war /apache-tomcat-9.0.65/webapps/'
+                sh 'sudo cp /var/lib/jenkins/workspace/Pet-Clinic/JavaApp-CICD/target/petclinic.war home/bobby/apache-tomcat-9.0.65/webapps/'
             }
         }
     }
